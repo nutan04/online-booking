@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./Component/Navbar";
+import BackgroundImg from "../src/Assets/images/background-image.png";
+import "./Header.css";
+import Form from "./Component/Form";
+import Services from "./Component/Services";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Form />
+      <div className="container">
+        <div className="services text-center">
+          <p className="services-sub-hed">CATEGORY</p>
+          <p className="services-hedding">We Offer Best Services</p>
+          <div class="row" style={{ width: "100%" }}>
+            <Services />
+            <Services />
+            <Services />
+            <Services />
+
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
